@@ -1,0 +1,10 @@
+.form {
+  width: 500px;
+  background-color: #ffdab9;
+}
+
+.img {
+  width: 300px;
+  height: auto;
+  display: block;
+}
