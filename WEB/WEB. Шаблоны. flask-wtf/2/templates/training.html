@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<h2>
+  {% if is_engineer %} Инженерные тренажёры {% else %} Научные симуляторы {%
+  endif %}
+</h2>
+<img
+  src="{% if is_engineer %}{{ engineer_img_url }}{% else %}{{ science_img_url }}{% endif %}"
+/>
+{% endblock %}

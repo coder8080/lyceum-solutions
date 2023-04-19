@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<h2>Оформление каюты</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Цвет стен</th>
+      <th scope="col">Рисунок</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        class="color-cell {% if gender == 'female' %}bg-danger{% else %}bg-primary{% endif %} {% if age < 21 %}bg-opacity{% endif %}"
+      ></td>
+      <td class="image-cell">
+        {% if age < 21 %}
+        <img src="{{ child_img_url }}" alt="рисунок" class="drawing" />
+        {% else %}
+        <img src="{{ adult_img_url }}" alt="рисунок" class="drawing" />
+        {% endif %}
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+<form>
+  <div class="mb-3">
+    <div class="d-flex flex-row gap-2 mb-3">
+      <img src="{{ emblem_url }}" alt="MARS">
+      <h1>Аварийный доступ</h1>
+    </div>
+    <label for="astronaut-id">Id астронавта</label>
+    <input
+      type="text"
+      class="form-control"
+      id="astronaut-id"
+      name="astronaut-id"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="astronaut-pass">Пароль астронавта</label>
+    <input
+      type="text"
+      class="form-control"
+      id="astronaut-pass"
+      name="astronaut-pass"
+    />
+    <div class="mb-3">
+      <label for="astronaut-pass">Id капитана</label>
+      <input
+        type="text"
+        class="form-control"
+        id="captain-id"
+        name="captain-id"
+      />
+  </div>
+  <div class="mb-3">
+    <label for="astronaut-pass">Пароль капитана</label>
+    <input
+      type="text"
+      class="form-control"
+      id="captain-pass"
+      name="captain-pass"
+    />
+</div>
+</form>
+{% endblock %}
