@@ -1,0 +1,2 @@
+dark_stars.db
+4000

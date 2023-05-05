@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<h2>Works log</h2>
+{% for work in works %}
+<h3 class="align-self-start">Action #{{ loop.index }}</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type of activity</th>
+      <th>Team leader</th>
+      <th>Duration</th>
+      <th>List of collaborators</th>
+      <th>Is finished</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ work.job}}</td>
+      <td>{{ work.leader_name }}</td>
+      <td>{{ work.work_size }} hours</td>
+      <td>{{ work.collaborators }}</td>
+      <td>Is {% if not work.is_finished %}not {% endif %}finished</td>
+    </tr>
+  </tbody>
+</table>
+{% if current_user.is_authenticated and (current_user.id == 1 or current_user.id
+== work.team_leader) %}
+<div class="d-flex flex-row">
+  <a href="/edit-job/{{ work.id }}" class="btn btn-warning me-2">Edit job</a>
+  <a href="/remove-job/{{ work.id }}" class="btn btn-danger">Delete job</a>
+</div>
+{% endif %} {% endfor %}
+<p><a href="/add-job">Добавить задачу</a></p>
+{% endblock %}

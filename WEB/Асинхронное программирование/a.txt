@@ -1,0 +1,22 @@
+Ivan started the 1 task.
+John started the 1 task.
+Sophia started the 1 task.
+John moved on to the defense of the 1 task.
+Sophia moved on to the defense of the 1 task.
+Ivan moved on to the defense of the 1 task.
+Sophia completed the 1 task.
+Sophia is resting.
+Ivan completed the 1 task.
+Ivan is resting.
+John completed the 1 task.
+John is resting.
+Sophia started the 2 task.
+Ivan started the 2 task.
+John started the 2 task.
+Sophia moved on to the defense of the 2 task.
+Ivan moved on to the defense of the 2 task.
+Sophia completed the 2 task.
+John moved on to the defense of the 2 task.
+Ivan completed the 2 task.
+John completed the 2 task.
+0.21059226989746094

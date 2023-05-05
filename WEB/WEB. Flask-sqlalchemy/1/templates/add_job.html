@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+<h2>Adding a job</h2>
+<form action="/add-job" method="post" class="form" novalidate>
+  <div>{{ form.hidden_tag() }}</div>
+  <div class="mb-3">
+    <label for="job">{{ form.job.label }}</label>
+    {{ form.job(class="form-control") }}
+  </div>
+  <div class="mb-3">
+    <label for="work_size">{{ form.work_size.label }}</label>
+    {{ form.work_size(class="form-control", type="number") }}
+  </div>
+  <div class="mb-3">
+    <label for="team_leader">{{ form.team_leader.label }}</label>
+    {{ form.team_leader(class="form-control", type="number") }}
+  </div>
+  <div class="mb-3">
+    <label for="collaborators">{{ form.collaborators.label }}</label>
+    {{ form.collaborators(class="form-control") }}
+  </div>
+  <div class="mb-3 form-check">
+    {{ form.is_finished(class="form-check-input") }}
+    <label for="is_finished" class="form-check-label">
+      {{ form.is_finished.label }}
+    </label>
+  </div>
+  {{ form.submit(class="btn btn-primary") }}
+</form>
+{% endblock %}

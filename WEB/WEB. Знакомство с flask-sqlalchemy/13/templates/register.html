@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+<h2>Register form</h2>
+<form class="form" action="/register" method="post" novalidate>
+  <div>{{ form.csrf_token }}</div>
+  {% for field in form if field.name != 'csrf_token' and field.name != 'submit'
+  %}
+  <div class="mb-3">
+    <label for="{{ field.name }}">{{ field.label }}</label>
+    {{ field(class='form-control') }}
+  </div>
+  {% endfor %} {{ form.submit(type="submit", class="btn btn-primary") }}
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<h1>Authorization</h1>
+<form action="/login" method="post" class="form" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    <label for="email"> {{ form.email.label }}</label>
+    {{ form.email(class="form-control", type="email") }}
+  </div>
+  <div class="mb-3">
+    <label for="password">{{ form.password.label }}</label>
+    {{ form.password(class="form-control", type="password") }}
+  </div>
+  <div class="form-check mb-3">
+    {{ form.remember_me(class="form-check-input", type="checkbox") }}
+    <label for="remember_me">{{ form.remember_me.label }}</label>
+  </div>
+  {{ form.submit(class="btn btn-primary mb-3", type="submit") }} {% if message
+  %}
+  <div class="alert alert-danger">{{ message }}</div>
+  {% endif %}
+</form>
+{% endblock %}
